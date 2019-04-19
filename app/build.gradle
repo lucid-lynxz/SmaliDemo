@@ -30,6 +30,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.supportV4)
     implementation(libs.constraintLayout)
+    implementation(libs.leakcanary)
 
     implementation(libs.kotlinLib)
 }

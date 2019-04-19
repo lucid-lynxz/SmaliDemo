@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import org.lynxz.smalidemo.ui.activity.HandlerTestActivity
 import org.lynxz.smalidemo.ui.activity.StringAppendTestActivity
 
 /**
@@ -18,14 +19,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_string_append_test.setOnClickListener {
-            startActivity(
-                Intent(
-                    this@MainActivity,
-                    StringAppendTestActivity::class.java
-                )
-            )
-        }
+        btn_string_append_test.setOnClickListener { jumpToActivity(StringAppendTestActivity::class.java) }
+        btn_handler_test.setOnClickListener { jumpToActivity(HandlerTestActivity::class.java) }
+    }
 
+    private fun jumpToActivity(target: Class<*>) {
+        startActivity(
+            Intent(this@MainActivity, target)
+        )
     }
 }
