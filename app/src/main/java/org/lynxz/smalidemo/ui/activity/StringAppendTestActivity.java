@@ -1,34 +1,37 @@
-package org.lynxz.smalidemo;
+package org.lynxz.smalidemo.ui.activity;
+
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+
 
 import android.os.Bundle;
 import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import org.lynxz.smalidemo.R;
 
 /**
  * Created by lynxz on 2019/4/15
  * E-mail: lynxz8866@gmail.com
  * <p>
- * Description:
+ * Description: 对比string和stringBuilder的拼接效率
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class StringAppendTestActivity extends AppCompatActivity implements View.OnClickListener {
 
     private int count = 0;
     private TextView tvMsg;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "StringAppendTestActivity";
     private EditText edtCount;
     private EditText edtBaseStr;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_string_append);
 
         edtCount = findViewById(R.id.edt_count); // 循环拼接次数
         edtBaseStr = findViewById(R.id.edt_base); // 拼接字符串
@@ -171,3 +174,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAG, "methodStatic log");
     }
 }
+
