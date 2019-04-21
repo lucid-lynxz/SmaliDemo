@@ -26,7 +26,7 @@
     .locals 0
     .param p1, "this$0"    # Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
-    .line 96
+    .line 97
     iput-object p1, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$2;->this$0:Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +39,11 @@
 .method public run()V
     .locals 1
 
-    .line 99
+    .line 100
     const-string v0, "leakHandler \u5ef6\u8fdf\u6267\u884c,\u5185\u5b58\u6cc4\u9732\u6d4b\u8bd5"
 
     invoke-static {v0}, Lorg/lynxz/smalidemo/util/Logger;->d(Ljava/lang/String;)V
 
-    .line 100
+    .line 101
     return-void
 .end method

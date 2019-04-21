@@ -24,6 +24,8 @@
 
 .field private leakHandler1:Landroid/os/Handler;
 
+.field private myEmptyStaticHandler:Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyEmptyStaticHandler;
+
 .field private myHandler:Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyStaticHandler;
 
 .field private pName:Ljava/lang/String;
@@ -52,7 +54,14 @@
 
     iput-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->leakHandler1:Landroid/os/Handler;
 
-    .line 89
+    .line 35
+    new-instance v0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyEmptyStaticHandler;
+
+    invoke-direct {v0}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyEmptyStaticHandler;-><init>()V
+
+    iput-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->myEmptyStaticHandler:Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyEmptyStaticHandler;
+
+    .line 90
     new-instance v0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyStaticHandler;
 
     invoke-direct {v0, p0}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyStaticHandler;-><init>(Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;)V
@@ -115,21 +124,21 @@
 .method private callPrivateFunc()V
     .locals 0
 
-    .line 105
+    .line 106
     return-void
 .end method
 
 .method private callPrivateFunc1()V
     .locals 0
 
-    .line 108
+    .line 109
     return-void
 .end method
 
 .method private callPrivateFunc2()V
     .locals 0
 
-    .line 111
+    .line 112
     return-void
 .end method
 
@@ -138,21 +147,21 @@
 .method callDefaultFunc()V
     .locals 0
 
-    .line 120
+    .line 121
     return-void
 .end method
 
 .method protected callProtectFunc()V
     .locals 0
 
-    .line 117
+    .line 118
     return-void
 .end method
 
 .method public callPublicFunc()V
     .locals 0
 
-    .line 114
+    .line 115
     return-void
 .end method
 
@@ -163,15 +172,15 @@
         .end annotation
     .end param
 
-    .line 93
+    .line 94
     invoke-super {p0, p1}, Landroid/support/v7/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 94
+    .line 95
     const v0, 0x7f09001c
 
     invoke-virtual {p0, v0}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->setContentView(I)V
 
-    .line 96
+    .line 97
     iget-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->leakHandler:Landroid/os/Handler;
 
     new-instance v1, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$2;
@@ -182,6 +191,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 102
+    .line 103
     return-void
 .end method

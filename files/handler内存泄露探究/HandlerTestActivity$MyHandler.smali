@@ -33,19 +33,19 @@
     .locals 0
     .param p2, "activity"    # Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
-    .line 70
+    .line 71
     iput-object p1, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyHandler;->this$0:Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 71
+    .line 72
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyHandler;->mWkActivity:Ljava/lang/ref/WeakReference;
 
-    .line 72
+    .line 73
     return-void
 .end method
 
@@ -54,7 +54,7 @@
 .method public getActivity()Landroid/app/Activity;
     .locals 1
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyHandler;->mWkActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -70,10 +70,10 @@
     .locals 1
     .param p1, "msg"    # Landroid/os/Message;
 
-    .line 80
+    .line 81
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 81
+    .line 82
     iget-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyHandler;->mWkActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -82,14 +82,14 @@
 
     check-cast v0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
-    .line 82
+    .line 83
     .local v0, "targetAct":Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
     if-eqz v0, :cond_0
 
-    .line 84
+    .line 85
     invoke-static {v0}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->access$300(Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;)V
 
-    .line 86
+    .line 87
     :cond_0
     return-void
 .end method

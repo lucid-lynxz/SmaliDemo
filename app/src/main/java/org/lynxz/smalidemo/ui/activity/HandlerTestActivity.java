@@ -32,6 +32,7 @@ public class HandlerTestActivity extends AppCompatActivity {
 
 
     private Handler leakHandler1 = new Handler();
+    private MyEmptyStaticHandler myEmptyStaticHandler = new MyEmptyStaticHandler();
 
     static class MyEmptyStaticHandler extends Handler {
         @Override

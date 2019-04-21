@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -30,9 +30,9 @@
     .locals 0
     .param p1, "msg"    # Landroid/os/Message;
 
-    .line 39
+    .line 40
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 40
+    .line 41
     return-void
 .end method

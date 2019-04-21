@@ -31,17 +31,17 @@
     .locals 1
     .param p1, "activity"    # Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
-    .line 46
+    .line 47
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 47
+    .line 48
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyStaticHandler;->mWkActivity:Ljava/lang/ref/WeakReference;
 
-    .line 48
+    .line 49
     return-void
 .end method
 
@@ -50,7 +50,7 @@
 .method public getActivity()Landroid/app/Activity;
     .locals 1
 
-    .line 51
+    .line 52
     iget-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyStaticHandler;->mWkActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -66,10 +66,10 @@
     .locals 4
     .param p1, "msg"    # Landroid/os/Message;
 
-    .line 56
+    .line 57
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 57
+    .line 58
     iget-object v0, p0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity$MyStaticHandler;->mWkActivity:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -78,7 +78,7 @@
 
     check-cast v0, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
 
-    .line 58
+    .line 59
     .local v0, "targetAct":Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;
     if-eqz v0, :cond_0
 
@@ -88,27 +88,27 @@
 
     if-nez v1, :cond_0
 
-    .line 59
+    .line 60
     invoke-static {v0}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->access$000(Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 60
+    .line 61
     .local v1, "name":Ljava/lang/String;
     invoke-static {}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->access$100()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 61
+    .line 62
     .local v2, "sName":Ljava/lang/String;
     invoke-static {v0}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->access$200(Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;)V
 
-    .line 62
+    .line 63
     const-string v3, ""
 
     invoke-static {v0, v3}, Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;->access$002(Lorg/lynxz/smalidemo/ui/activity/HandlerTestActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 64
+    .line 65
     .end local v1    # "name":Ljava/lang/String;
     .end local v2    # "sName":Ljava/lang/String;
     :cond_0
